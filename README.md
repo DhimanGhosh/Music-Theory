@@ -24,3 +24,4 @@ This app lets you:
 		$ cd ./GUI_QT/
 		$ python MusicTheoryGuide.py (For Interactive GUI)
 
+Thanks.

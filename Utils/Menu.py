@@ -6,10 +6,8 @@ from time import sleep
 
 if platform.system() == 'Linux':
     from Music import Music
-    from Jarvis_AI import Voice_Assistant
 else:
     from Utils.Music import Music
-    #from Utils.Jarvis_AI import Voice_Assistant
 
 class Menu:
     def __init__(self):
@@ -174,7 +172,7 @@ class Menu:
         if music.valid_note(note)[1]:
             if music != None:
                 result = music.minor_chord()
-                print("Major Chord Progression for {} Major Scale: ".format(note) + ' '.join(result))
+                print("{} Minor Chord Progression: ".format(note) + ' '.join(result))
             else:
                 self.Study_Music_Theory()
         else:

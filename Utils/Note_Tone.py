@@ -125,7 +125,7 @@ class Note_Tone:
     As8 = 7459
     B8  = 7902
     
-    def __init__(self):
+    def __init__(self): # Store as dictionary
         self.Octave0 = [self.C0, self.Cs0, self.D0, self.Ds0, self.E0, self.F0, self.Fs0, self.G0, self.Gs0, self.A0, self.As0, self.B0]
         self.Octave1 = [self.C1, self.Cs1, self.D1, self.Ds1, self.E1, self.F1, self.Fs1, self.G1, self.Gs1, self.A1, self.As1, self.B1]
         self.Octave2 = [self.C2, self.Cs2, self.D2, self.Ds2, self.E2, self.F2, self.Fs2, self.G2, self.Gs2, self.A2, self.As2, self.B2]
@@ -135,6 +135,123 @@ class Note_Tone:
         self.Octave6 = [self.C6, self.Cs6, self.D6, self.Ds6, self.E6, self.F6, self.Fs6, self.G6, self.Gs6, self.A6, self.As6, self.B6]
         self.Octave7 = [self.C7, self.Cs7, self.D7, self.Ds7, self.E7, self.F7, self.Fs7, self.G7, self.Gs7, self.A7, self.As7, self.B7]
         self.Octave8 = [self.C8, self.Cs8, self.D8, self.Ds8, self.E8, self.F8, self.Fs8, self.G8, self.Gs8, self.A8, self.As8, self.B8]
+        
+        # self.Octave0 = {'C0' : self.C0,
+        #                 'Db0' : self.Cs0,
+        #                 'D0' : self.D0,
+        #                 'Eb0' : self.Ds0,
+        #                 'E0' : self.E0,
+        #                 'F0' : self.F0,
+        #                 'Gb0' : self.Fs0,
+        #                 'G0' : self.G0,
+        #                 'Ab0' : self.Gs0,
+        #                 'A0' : self.A0,
+        #                 'Bb0' : self.As0,
+        #                 'B0' : self.B0}
+        
+        # self.Octave1 = {'C1' : self.C1,
+        #                 'Db1' : self.Cs1,
+        #                 'D1' : self.D1,
+        #                 'Eb1' : self.Ds1,
+        #                 'E1' : self.E1,
+        #                 'F1' : self.F1,
+        #                 'Gb1' : self.Fs1,
+        #                 'G1' : self.G1,
+        #                 'Ab1' : self.Gs1,
+        #                 'A1' : self.A1,
+        #                 'Bb1' : self.As1,
+        #                 'B1' : self.B1}
+        
+        # self.Octave2 = {'C2' : self.C2,
+        #                 'Db2' : self.Cs2,
+        #                 'D2' : self.D2,
+        #                 'Eb2' : self.Ds2,
+        #                 'E2' : self.E2,
+        #                 'F2' : self.F2,
+        #                 'Gb2' : self.Fs2,
+        #                 'G2' : self.G2,
+        #                 'Ab2' : self.Gs2,
+        #                 'A2' : self.A2,
+        #                 'Bb2' : self.As2,
+        #                 'B2' : self.B2}
+        
+        # self.Octave3 = {'C3' : self.C3,
+        #                 'Db3' : self.Cs3,
+        #                 'D3' : self.D3,
+        #                 'Eb3' : self.Ds3,
+        #                 'E3' : self.E3,
+        #                 'F3' : self.F3,
+        #                 'Gb3' : self.Fs3,
+        #                 'G3' : self.G3,
+        #                 'Ab3' : self.Gs3,
+        #                 'A3' : self.A3,
+        #                 'Bb3' : self.As3,
+        #                 'B3' : self.B3}
+        
+        # self.Octave4 = {'C4' : self.C4,
+        #                 'Db4' : self.Cs4,
+        #                 'D4' : self.D4,
+        #                 'Eb4' : self.Ds4,
+        #                 'E4' : self.E4,
+        #                 'F4' : self.F4,
+        #                 'Gb4' : self.Fs4,
+        #                 'G4' : self.G4,
+        #                 'Ab4' : self.Gs4,
+        #                 'A4' : self.A4,
+        #                 'Bb4' : self.As4,
+        #                 'B4' : self.B4}
+        
+        # self.Octave5 = {'C5' : self.C5,
+        #                 'Db5' : self.Cs5,
+        #                 'D5' : self.D5,
+        #                 'Eb5' : self.Ds5,
+        #                 'E5' : self.E5,
+        #                 'F5' : self.F5,
+        #                 'Gb5' : self.Fs5,
+        #                 'G5' : self.G5,
+        #                 'Ab5' : self.Gs5,
+        #                 'A5' : self.A5,
+        #                 'Bb5' : self.As5,
+        #                 'B5' : self.B5}
+        
+        # self.Octave6 = {'C6' : self.C6,
+        #                 'Db6' : self.Cs6,
+        #                 'D6' : self.D6,
+        #                 'Eb6' : self.Ds6,
+        #                 'E6' : self.E6,
+        #                 'F6' : self.F6,
+        #                 'Gb6' : self.Fs6,
+        #                 'G6' : self.G6,
+        #                 'Ab6' : self.Gs6,
+        #                 'A6' : self.A6,
+        #                 'Bb6' : self.As6,
+        #                 'B6' : self.B6}
+        
+        # self.Octave7 = {'C7' : self.C7,
+        #                 'Db7' : self.Cs7,
+        #                 'D7' : self.D7,
+        #                 'Eb7' : self.Ds7,
+        #                 'E7' : self.E7,
+        #                 'F7' : self.F7,
+        #                 'Gb7' : self.Fs7,
+        #                 'G7' : self.G7,
+        #                 'Ab7' : self.Gs7,
+        #                 'A7' : self.A7,
+        #                 'Bb7' : self.As7,
+        #                 'B7' : self.B7}
+        
+        # self.Octave8 = {'C8' : self.C8,
+        #                 'Db8' : self.Cs8,
+        #                 'D8' : self.D8,
+        #                 'Eb8' : self.Ds8,
+        #                 'E8' : self.E8,
+        #                 'F8' : self.F8,
+        #                 'Gb8' : self.Fs8,
+        #                 'G8' : self.G8,
+        #                 'Ab8' : self.Gs8,
+        #                 'A8' : self.A8,
+        #                 'Bb8' : self.As8,
+        #                 'B8' : self.B8}
 
     def notes(self, octave = 4):
         if octave == 0:

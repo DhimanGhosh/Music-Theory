@@ -1,0 +1,33 @@
+for media_player control: [Working]
+
+{
+if call_VA:
+	ask for control
+	wait = 1
+	while not control:
+		if control:
+			accept and perform
+			break
+		elif wait == timeout:
+			break
+		wait += 1
+}
+
+====================================================================================
+
+for automatic song download mechanism: [Working] - but going for infinite search ;; Apply conditional break (MP3 found -- break)
+
+
+{
+if youtube 5 songs list come:
+	try:
+		each song to download
+	except:
+		again-try
+else:
+	search for next 5 list: (can also be implemented for search more)
+	repeat try
+}
+
+====================================================================================
+

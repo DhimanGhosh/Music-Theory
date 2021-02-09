@@ -1,4 +1,8 @@
 import datetime
+import os
+import sys
+import platform
+
 today = datetime.date.today()
 release_date = datetime.date(2020, 4, 21)
 diff = release_date - today
@@ -10,7 +14,7 @@ elif days_passed > 1:
 else:
     days_passed_str = 'Today'
 print(
-'''
+    '''
 _________________________________________________________________________
 | Application           : Music Theory Guide                            |
 | Objective             : Help you in understanding and creating music  |
@@ -22,6 +26,7 @@ _________________________________________________________________________
 _________________________________________________________________________
 '''.format(days_passed_str)
 )
+
 
 def run():
     wrg = Wrong()
@@ -116,13 +121,14 @@ def run():
     else:
         print('See you soon!')
 
-def __linux_pkg_install(pkg): # Install all the dependencies first time
-    #print('Check: {}'.format(os.system('apt-cache policy {}'.format(pkg))))
+
+def __linux_pkg_install(pkg):  # Install all the dependencies first time
+    # print('Check: {}'.format(os.system('apt-cache policy {}'.format(pkg))))
     if os.system('apt list --installed | grep {} > /dev/null'.format(pkg)) != 0:
         os.system('sudo apt-get -y install {}'.format(pkg))
 
+
 if __name__ == '__main__':
-    import sys, platform, os
     if platform.system() == 'Linux':
         sys.path.insert(0, './Utils/')
         __linux_pkg_install('speech-dispatchere')

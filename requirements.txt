@@ -16,3 +16,8 @@ bs4
 python-levenshtein
 mutagen
 selenium
+lxml
+playsound
+pydub
+youtube_search
+youtube-dl

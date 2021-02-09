@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='Music-Theory-Guide',
-    version='2.0',
+    name='Music_Theory_Guide',
+    version='3.0',
     long_description=open('README.md').read(),
     author='Dhiman Ghosh',
     url='https://github.com/DhimanGhosh/Music-Theory-Guide',

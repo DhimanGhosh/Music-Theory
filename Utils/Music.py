@@ -31,13 +31,17 @@ import mingus.extra.tablature as M_tablature
 import mingus.extra.fft as M_fft
 # ----- MINGUS ----- #
 
+import os
+import sys
 import platform
 if platform.system() == 'Linux':
-    import os
     from Note_Tone import Note_Tone
     from Audio_Processing import Audio_Process 
     from Voice_Assistant import Voice_Assistant
 elif platform.system() == 'Windows':
+    root_dir = os.path.realpath('')
+    root_dir = '\\'.join(root_dir.split('\\')[:-1])
+    sys.path.insert(0, root_dir)
     import winsound
     from Utils.Note_Tone import Note_Tone
     from Utils.Audio_Processing import Audio_Process
@@ -610,4 +614,7 @@ class Music:
         self.__ap.play_mp3(music_dir, self.__audio_file)
 
     def voice_assist(self):
+        '''
+        Start Voice Assistant
+        '''
         return self.__voice_assist.start_AI_engine()
